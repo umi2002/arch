@@ -12,3 +12,4 @@ ttf-firacode-nerd
 wlroots
 ublock-origin
 unzip
+sudo
