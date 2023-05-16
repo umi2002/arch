@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -Syyu --needed --noconfirm - < pkglist.txt
+pacman -S --needed --noconfirm - < pkglist.txt
 
 mkdir /home/umi/srcpkgs/
 chown -R umi:umi /home/umi/srcpkgs/
