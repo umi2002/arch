@@ -5,7 +5,7 @@ su umi << "EOF"
 rustup default nightly
 
 # Install necessary libraries
-sudo pacman -S gtk3 gtk-layer-shell pango gdk-pixbuf2 cairo glib2 gcc-libs glibc --noconfirm
+sudo pacman -S gtk3 gtk-layer-shell pango gdk-pixbuf2 cairo glib2 gcc-libs glibc --needed --noconfirm
 
 # Clone eww repository
 cd ~/srcpkgs/
