@@ -7,3 +7,7 @@ betterdiscordctl
 alsa-firmware
 alsa-utils
 adobe-source-han-sans-jp-fonts
+ttf-fira-code
+ttf-firacode-nerd
+wlroots
+ublock-origin

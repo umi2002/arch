@@ -24,3 +24,5 @@ cargo build --release --no-default-features --features=wayland
 
 # Make eww executable
 chmod +x target/release/eww
+
+cd /arch
