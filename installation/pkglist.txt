@@ -12,3 +12,4 @@ wlroots
 ublock-origin
 unzip
 sudo
+rust
