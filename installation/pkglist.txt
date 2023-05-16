@@ -11,3 +11,4 @@ ttf-fira-code
 ttf-firacode-nerd
 wlroots
 ublock-origin
+unzip
