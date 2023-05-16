@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# Update system first
-sudo pacman -Syu --noconfirm
-
+su umi << "EOF"
 # Install rust and cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source /home/umi/.cargo/env
@@ -27,3 +25,4 @@ cargo build --release --no-default-features --features=wayland
 chmod +x target/release/eww
 
 cd /arch
+EOF
