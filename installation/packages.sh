@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -Syyu --needed --noconfirm - < pkglist.txt
+pacman -Syyu --needed --noconfirm - < pkglist.txt
 
 mkdir /home/umi/srcpkgs/
 ./yay.sh
