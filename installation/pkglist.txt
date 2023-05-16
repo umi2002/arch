@@ -3,7 +3,6 @@ neovim
 hyprland
 spotify-launcher
 discord
-betterdiscordctl
 alsa-firmware
 alsa-utils
 adobe-source-han-sans-jp-fonts
