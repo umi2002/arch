@@ -1,0 +1,24 @@
+{
+  "enabledLanguageIds": [
+    "plaintext",
+    "markdown",
+    "latex",
+    "org"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "*",
+      "allowCompoundWords": true,
+      "dictionaries": ["english", "french", "cpp"],
+      "caseSensitive": true
+    }
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "french",
+      "path": "/usr/lib/node_modules/cspell-dict-fr-fr/cspell-ext.json"
+    }
+  ],
+  "dictionaries": ["french"]
+}
+

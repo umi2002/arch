@@ -1,0 +1,93 @@
+(defwindow bottom-center
+           :monitor 0
+           :geometry (geometry :x "0px"
+                               :y "10px"
+                               :width "30%"
+                               :height "30px"
+                               :anchor "bottom center")
+           :stacking "fg"
+           (centerbox :orientation "h"
+                (prev-song);
+                (music);
+                (next-song);
+           )
+)
+
+(deflisten music :initial "No song playing" "bash ~/.config/eww/scripts/get-song.sh")
+
+(deflisten play-pause :initial " " "bash ~/.config/eww/scripts/get-play-pause.sh")
+
+(defwidget music []
+  (eventbox :onclick "bash ~/.config/eww/scripts/set-play-pause.sh"
+    (label :text "${play-pause} ${music}"
+           :limit-width 30
+           :width 30
+    )
+  )
+)
+
+(defwidget prev-song []
+  (eventbox :onclick "playerctl -p spotify previous"
+    (label :text " 󰙣 "
+           :xalign 0.05
+    )
+  )
+)
+
+(defwidget next-song []
+  (eventbox :onclick "playerctl -p spotify next"
+    (label :text " 󰙡 "
+           :xalign 1
+    )
+  )
+)
+
+(defwindow volume
+           :monitor 0
+           :geometry (geometry :x "550px"
+                               :y "10px"
+                               :width "5%"
+                               :height "30px"
+                               :anchor "bottom right")
+           :stacking "fg"
+           (box :orientation "h"
+                :halign "center"
+                (volume)
+           )
+)
+
+(defvar volume-visible false)
+(defvar muted false)
+
+(defwindow volume-slider
+           :monitor 0
+           :geometry (geometry :x "575px"
+                               :y "50px"
+                               :anchor "bottom right")
+           :stacking "fg"
+           (box :orientation "h"
+                 (scale :orientation "v"
+                        :flipped true
+                        :value volume-slider
+                        :min 0
+                        :max 100
+                        :width 1
+                        :height 200
+                        :visible volume-visible
+                        :onchange "amixer -q -D pulse sset Master {}%")
+           )
+)
+
+(deflisten volume-slider
+  `pactl list sinks | grep 'Volume:' | head -n1 | sed -e 's,.*: \([0-9][0-9]*\)%.*,\1,'`)
+(deflisten volume
+  "bash ~/.config/eww/scripts/get-volume.sh")
+
+(defwidget volume []
+  (eventbox
+    :onclick "bash ~/.config/eww/scripts/set-mute.sh"
+    :onrightclick "bash ~/.config/eww/scripts/set-volume-slider.sh"
+    :onmiddleclick "pavucontrol &"
+    (label :text {muted ? "󰝟 ${volume}" : "󰕾 ${volume}"})
+  )
+)

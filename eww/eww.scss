@@ -1,0 +1,17 @@
+@mixin default {
+  font-family: "FiraCode";
+  font-size: 18px;
+  color: #e0def4;
+  background-color: #232136;
+  border: 2px solid #569fba;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+window {
+    @include default;
+}
+
+calendar {
+    @include default;
+}
