@@ -14,7 +14,7 @@ rustup default nightly
 sudo pacman -S gtk3 gtk-layer-shell pango gdk-pixbuf2 cairo glib2 gcc-libs glibc --noconfirm
 
 # Clone eww repository
-cd /home/umi/aur/ && git clone https://github.com/elkowar/eww
+cd /home/umi/srcpkgs/ && git clone https://github.com/elkowar/eww
 
 # Change to eww directory
 cd eww

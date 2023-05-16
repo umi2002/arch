@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir ~/srcpkgs/
+mkdir /home/umi/srcpkgs/
 ./eww.sh
 ./spicetify.sh
