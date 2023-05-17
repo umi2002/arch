@@ -1,7 +1,6 @@
 base-devel
 neovim
 hyprland
-spotify-launcher
 discord
 alsa-firmware
 alsa-utils

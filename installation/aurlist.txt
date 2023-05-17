@@ -1,2 +1,3 @@
 librewolf-bin
 betterdiscordctl-git
+spotify
