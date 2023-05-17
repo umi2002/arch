@@ -4,6 +4,7 @@ mode=$1
 device=$2
 
 su umi << "EOF"
+mkdir ~/.config/
 if [[ "$mode" = "download" ]]; then
     cp -rf ./eww/ /home/umi/.config/
     cp -rf ./nvim/ /home/umi/.config/
