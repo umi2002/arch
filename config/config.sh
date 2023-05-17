@@ -10,6 +10,8 @@ if [[ "$mode" = "download" ]]; then
     cp -rf ./spicetify/ /home/umi/.config/
     cp -rf ./neofetch/ /home/umi/.config/
     cp -rf ./BetterDiscord/ /home/umi/.config/
+    spicetify apply
+    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 elif [[ "$mode" = "upload" ]]; then
     cp -rf /home/umi/.config/eww/ ./
     cp -rf /home/umi/.config/nvim/ ./
