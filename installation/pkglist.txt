@@ -13,3 +13,4 @@ ublock-origin
 unzip
 sudo
 rustup
+networkmanager

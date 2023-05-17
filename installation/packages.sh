@@ -10,3 +10,4 @@ yay -Syyu --needed --noconfirm - < aurlist.txt
 
 ./eww.sh
 ./spicetify.sh
+systemctl enable NetworkManager
