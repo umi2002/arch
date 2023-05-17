@@ -3,6 +3,7 @@
 mode=$1
 device=$2
 
+su umi << "EOF"
 if [[ "$mode" = "download" ]]; then
     cp -rf ./eww/ /home/umi/.config/
     cp -rf ./nvim/ /home/umi/.config/
@@ -22,3 +23,4 @@ if [[ "$device" = "desktop" ]]; then
 elif [[ "$device" = "laptop" ]]; then
     ./laptop/config.sh $mode
 fi
+EOF

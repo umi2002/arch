@@ -1,5 +1,6 @@
 #!/bin/bash
 
+su umi << "EOF"
 mkdir -p /home/umi/.local/share/nvim/site/pack/packer/start
 
 git clone https://github.com/wbthomason/packer.nvim \
@@ -8,3 +9,4 @@ git clone https://github.com/wbthomason/packer.nvim \
 cp -rf nvim /home/umi/.config/nvim/
 
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+EOF
