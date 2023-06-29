@@ -65,7 +65,7 @@
            )
 )
 
-(defvar calendar_visible false)
+(defvar calendar-visible false)
                 
 (defpoll clock :interval "1s"
   `date +"%a %d/%m/%y    %H:%M:%S"`
